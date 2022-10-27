@@ -1,0 +1,40 @@
+<div *ngIf="usuario">
+  <h2>{{ usuario.name | uppercase }} DETALLES</h2>
+  <div><span>id: </span>{{ usuario.id }}</div>
+  <div><span>Cantidad: </span>{{ usuario.quantity }}</div>
+  <div><span>Precio: </span>{{ usuario.b_price }}</div>
+  <div><span>Precio público: </span>{{ usuario.g_price }}</div>
+  <div>
+    <label for="usuario-name">Nombre de usuario: </label>
+    <input
+      id="usuario-name"
+      [(ngModel)]="usuario.name"
+      placeholder="Usuario name"
+    />
+  </div>
+  <div>
+    <label for="usuario-quantity">Cantidad: </label>
+    <input
+      id="usuario-quantity"
+      [(ngModel)]="usuario.quantity"
+      placeholder="Usuario quantity"
+    />
+  </div>
+  <div>
+    <label for="usuario-b_price">Precio: </label>
+    <input
+      id="usuario-b_price"
+      [(ngModel)]="usuario.b_price"
+      placeholder="Usuario b_price"
+    />
+  </div>
+  <div>
+    <label for="usuario-g_price">Precio público: </label>
+    <input
+      id="usuario-g_price"
+      [(ngModel)]="usuario.g_price"
+      placeholder="Usuario g_price"
+    />
+  </div>
+  <button type="button" (click)="goBack()">Regresar</button>
+</div>

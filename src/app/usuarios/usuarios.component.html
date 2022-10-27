@@ -1,0 +1,11 @@
+<h2>Productos</h2>
+
+<ul class="usuarios">
+  <li *ngFor="let usuario of usuarios">
+    <a routerLink="/detail/{{ usuario.id }}">
+      <span class="badge">{{ usuario.id }}</span> {{ usuario.name }} / cantidad:
+      {{ usuario.quantity }} / precio: ${{ usuario.b_price }}.00 / precio
+      público: ${{ usuario.g_price }}.00
+    </a>
+  </li>
+</ul>
